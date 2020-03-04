@@ -1,0 +1,17 @@
+.Dashboard {
+  display: flex;
+  text-align: center;
+  justify-content: space-evenly;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.Dashboard-title {
+    margin: 20px auto;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+

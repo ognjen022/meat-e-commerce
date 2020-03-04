@@ -1,0 +1,72 @@
+.Landing-button {
+  text-align: center;
+  background-color: black;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1;
+  padding: 10px 20px;
+  text-decoration: none;
+  transition: all 0.5s;
+}
+
+.Landing-button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.Landing-button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.Landing-button:hover span {
+  color: white;
+  padding-right: 25px;
+}
+
+.Landing-button:hover span:after {
+  color: white;
+  opacity: 1;
+  right: 0;
+}
+
+.Landing-title {
+  color: white;
+  position: center;
+  margin: 20px 0 1.6rem 0;
+  line-height: 1;
+}
+
+.Landing-box-layout {
+  background: fade-out(white, .15);
+  border-radius: 3px;
+  padding: 3.2rem 1.6rem;
+  text-align: center;
+  width: 25rem;
+}
+
+.Landing-box {
+  align-items: center;
+  background: url('https://cmkt-image-prd.freetls.fastly.net/0.1.0/ps/949193/910/590/m2/fpnw/wm1/u1mgld89kri3ytgjbz2gejn81lady8ci0vooy2ek37jxksslr3sn1zyn9puwv4uj-.jpg?1454262377&s=9847bf09fd4af9d87bb56c7d235a24a4');
+  background-size: cover;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+
+}

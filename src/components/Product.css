@@ -1,0 +1,81 @@
+.Product {
+  padding: 10px;
+  margin: 1rem;
+  box-shadow: 7px 10px 12px -5px rgba(0,0,0, 0.56);
+  text-align: center;
+  background-color: white;
+  border-radius: 3px;
+}
+
+.Product-button {
+  text-align: center;
+  background-color: black;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1;
+  padding: 10px 20px;
+  text-decoration: none;
+  transition: all 0.5s;
+}
+
+.Product-button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.Product-button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.Product-button:hover span {
+  color: white;
+  padding-right: 25px;
+}
+
+.Product-button:hover span:after {
+  color: white;
+  opacity: 1;
+  right: 0;
+}
+
+.Product-data {
+  font-size: 80%;
+}
+
+.Product-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  width: 150px;
+  background-color: white;
+  border-radius: 3px;
+  margin: 1rem;
+}
+
+.Product img {
+  transition: all ease 500ms;
+  height: 100px;
+  width: 100px;
+}
+
+.Product img:hover {
+  transform: scale(1.25);
+}
+
+.Product-title {
+  margin-bottom: 1rem;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
