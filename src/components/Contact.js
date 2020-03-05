@@ -1,6 +1,7 @@
 import React from "react";
 import moment from "moment";
 import { v4 as uuidv4 } from 'uuid';
+import "./Contact.css"
 import {Form, Button, Container, Row} from "react-bootstrap";
 
 class Contact extends React.Component {
@@ -9,8 +10,10 @@ class Contact extends React.Component {
   
     const user = {
       id: uuidv4(),
+      name: e.target.user.value,
+      lastname: e.target.lastname.value,
       email: e.target.email.value,
-      password: e.target.password.value,
+      phone: e.target.number.value,
       body: e.target.content.value,
       createdAt: moment()
     }
@@ -20,17 +23,17 @@ class Contact extends React.Component {
   render() {
     return(
       <Container>
-            <Form onSubmit={this.onFormSubmit}>
+            <Form className="Form" onSubmit={this.onFormSubmit}>
             <Row>
                 <Form.Group controlId="formBasicName">
                   <Form.Label>Name:</Form.Label>
-                  <Form.Control type="text" name="email" placeholder="Enter your name" />                      
+                  <Form.Control type="text" name="user" placeholder="Enter your name" />                      
                 </Form.Group>
               </Row>
               <Row>
                 <Form.Group controlId="formBasicName">
                   <Form.Label>Last Name:</Form.Label>
-                  <Form.Control type="text" name="email" placeholder="Enter your last name" />                      
+                  <Form.Control type="text" name="lastname" placeholder="Enter your last name" />                      
                 </Form.Group>
               </Row>
               <Row>
@@ -48,11 +51,11 @@ class Contact extends React.Component {
               <Row>
                 <Form.Group controlId="formTextArea">
                   <Form.Label>If you have any additional info for us, you can add it here:</Form.Label>
-                  <Form.Control as="textarea" rows={7} cols={100} name="content" />                      
+                  <Form.Control as="textarea" rows={7} cols={50} name="content" />                      
                 </Form.Group>
               </Row>
               <Row>
-                <Button variant="primary" type="submit">Submit</Button>
+                <Button className="Contact-button" variant="primary" type="submit">Submit</Button>
               </Row>
             </Form>
         </Container>

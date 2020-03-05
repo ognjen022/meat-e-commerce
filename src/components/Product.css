@@ -66,8 +66,8 @@
 
 .Product img {
   transition: all ease 500ms;
-  height: 100px;
-  width: 100px;
+  height: 130px;
+  width: 130px;
 }
 
 .Product img:hover {
