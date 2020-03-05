@@ -11,13 +11,15 @@ class Header extends React.Component {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto color-nav">
-                <Nav.Link as={Link} to="/products">Home</Nav.Link>
+                <NavItem>
+                    <Nav.Link as={Link} to="/products">Home</Nav.Link>
+                </NavItem>
             </Nav>
             <Nav>
-                <NavItem className="Nav-item">
+                <NavItem>
                     <Nav.Link as={Link} to="/contact">Contact</Nav.Link>
                 </NavItem>
-                <NavItem className="Nav-item">
+                <NavItem>
                     <Nav.Link className="Nav-link" as={Link} to="/about">About us</Nav.Link>
                 </NavItem>
             </Nav>
