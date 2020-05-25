@@ -16,7 +16,6 @@ import { Container } from 'react-bootstrap';
 const AppRouter = () => (
   <Router>
     <Header />
-
     <Switch>
       <Route exact path="/" component={Landing} />
       <Container>

@@ -7,19 +7,15 @@ import { useSelector } from 'react-redux';
 const Header = (props) => {
   const cartItems = useSelector((state) => state.cart);
   return (
-    <Navbar bg="light" expand="lg">
-      <Navbar.Brand>
-        <img className="Header-logo" src="./chickenfavicon.png" /> KBInvest
-      </Navbar.Brand>
+    <Navbar bg="dark" variant="dark" expand="lg">
+      <Nav.Link as={Link} to="/products">
+        <Navbar.Brand>
+          <img className="Header-logo" src="./chickenfavicon.png" /> KBInvest
+        </Navbar.Brand>
+      </Nav.Link>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="mr-auto color-nav">
-          <NavItem>
-            <Nav.Link as={Link} to="/products">
-              Home
-            </Nav.Link>
-          </NavItem>
-        </Nav>
+        <Nav className="mr-auto color-nav"></Nav>
         <Nav>
           <NavItem>
             <Nav.Link as={Link} to="/mycart">

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { v4 as uuidv4 } from 'uuid';
 import { Form } from 'react-bootstrap';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { changeAmount } from '../store/actions/cartActions';
 import { addItem } from '../store/actions/cartActions';
 import './Product.css';
 
@@ -14,17 +14,25 @@ const Product = (props) => {
     setAmount(e.target.value);
   };
 
+  const cartItems = useSelector((state) => state.cart);
+
   const addToCart = () => {
-    const itemToAdd = {
-      id: uuidv4(),
-      title: props.title,
-      img: props.img,
-      description: props.description,
-      price: props.price * amount,
-      amount: amount,
-    };
-    console.log(itemToAdd);
-    dispatch(addItem(itemToAdd));
+    const item = cartItems.find((item) => item.id === props.id);
+    console.log(item);
+    if (!item) {
+      const itemToAdd = {
+        id: props.id,
+        title: props.title,
+        img: props.img,
+        description: props.description,
+        price: props.price,
+        amount: amount,
+      };
+      console.log(itemToAdd);
+      dispatch(addItem(itemToAdd));
+    } else {
+      dispatch(changeAmount(item.id, item.amount + 1));
+    }
   };
 
   return (
