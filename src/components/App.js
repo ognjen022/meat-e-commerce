@@ -1,15 +1,13 @@
 import React from 'react';
-import Dashboard from "Dashboard";
+import Dashboard from 'Dashboard';
 import './App.css';
 
-class App extends React.Component{
-  render() {
-    return (
-      <div className="App">
-        <Dashboard />
-      </div>
-    );
-  }
-}
+const App = () => {
+  return (
+    <div className="App">
+      <Dashboard />
+    </div>
+  );
+};
 
 export default App;

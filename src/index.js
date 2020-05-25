@@ -1,15 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import AppRouter from "./components/AppRouter";
-import "./index.css"
+import AppRouter from './components/AppRouter';
+import store from './store/store';
+import { Provider } from 'react-redux';
+import './index.css';
 
-class App extends React.Component {
-  render(){
-    return(
-        <AppRouter />
-    );
-  }
-}
+const App = () => {
+  return <AppRouter />;
+};
 
-ReactDOM.render(<App />, document.getElementById('root'));
-
+ReactDOM.render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById('root')
+);

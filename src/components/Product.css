@@ -1,7 +1,7 @@
 .Product {
   padding: 10px;
   margin: 1rem;
-  box-shadow: 7px 10px 12px -5px rgba(0,0,0, 0.56);
+  box-shadow: 7px 10px 12px -5px rgba(0, 0, 0, 0.56);
   text-align: center;
   background-color: white;
   border-radius: 3px;
@@ -70,12 +70,17 @@
   width: 130px;
 }
 
-.Product img:hover {
+/* .Product img:hover {
   transform: scale(1.25);
-}
+} */
 
 .Product-title {
   margin-bottom: 1rem;
   font-weight: bold;
   font-size: 1.5rem;
+}
+
+.Product-amount {
+  margin: 10px auto;
+  width: 50px;
 }
