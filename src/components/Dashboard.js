@@ -4,7 +4,7 @@ import Product from './Product';
 import './Dashboard.css';
 
 const Dashboard = (props) => {
-  const [products, setProducts] = useState([
+  const [products] = useState([
     {
       id: uuidv4(),
       title: 'Beef Fillet',

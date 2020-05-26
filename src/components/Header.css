@@ -9,4 +9,12 @@
 .Header-logo {
   height: 35px;
   width: 35px;
+  display: inline;
+  margin-right: 8px;
+}
+
+.Header-logo-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }

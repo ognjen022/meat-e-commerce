@@ -9,8 +9,9 @@ const Header = (props) => {
   return (
     <Navbar bg="dark" variant="dark" expand="lg">
       <Nav.Link as={Link} to="/products">
-        <Navbar.Brand>
-          <img className="Header-logo" src="./chickenfavicon.png" /> KBInvest
+        <Navbar.Brand className="Header-logo-container">
+          <img alt="logo" className="Header-logo" src="./chickenfavicon.png" />
+          KBInvest
         </Navbar.Brand>
       </Nav.Link>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
