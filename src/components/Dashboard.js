@@ -13,8 +13,12 @@ const Dashboard = (props) => {
   }, []);
 
   const fetchProducts = async () => {
-    const res = await axios.get(`http://kbapi.dvlp.rs/products`);
-    setProducts(res.data);
+    try {
+      const res = await axios.get(`http://kbapi.dvlp.rs/products`);
+      setProducts(res.data);
+    } catch (err) {
+      console.error(err.message);
+    }
   };
 
   const [products, setProducts] = useState([]);
