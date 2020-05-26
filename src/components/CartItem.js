@@ -47,8 +47,8 @@ const CartItem = (props) => {
     <>
       <header className="container">
         <br />
-        <h1>Your Cart</h1>
-        <span className="count">{props.products.length} items in the bag</span>
+        <h1 className="text-3xl">Your Cart</h1>
+        <span className="count">{props.products.length} items in the cart</span>
       </header>
       <section className="container">
         <ul className="products">

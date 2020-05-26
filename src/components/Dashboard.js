@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { Spinner } from 'react-bootstrap';
+import Spinner from './Spinner';
 import Product from './Product';
 import './Dashboard.css';
 

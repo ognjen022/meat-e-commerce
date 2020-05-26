@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@fullhuman/postcss-purgecss": "^2.2.0",
     "@reduxjs/toolkit": "^1.2.5",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
@@ -28,12 +29,12 @@
     "uuid": "^7.0.1"
   },
   "scripts": {
-    "start": "npm-run-all --parallel watch:css start:react",
-    "build": "npm-run-all build:css build:react",
+    "build:tailwind": "postcss src/tailwind.css -o src/tailwind.generated.css",
+    "watch:tailwind": "postcss -w src/tailwind.css -o src/tailwind.generated.css",
+    "start": "run-p watch:tailwind start:react",
     "start:react": "react-scripts start",
-    "watch:css": "postcss src/styles/index.css -o src/index.css -w",
-    "build:react": "react-scripts build",
-    "build:css": "postcss src/styles/index.css -o src/index.css",
+    "prebuild": "npm run build:tailwind",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

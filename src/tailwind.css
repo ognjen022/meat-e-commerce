@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: url(https://www.kolfoods.com/images/70_Kol_Back.jpg);
+  overflow-x: hidden;
+}
