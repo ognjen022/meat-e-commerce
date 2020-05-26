@@ -18,7 +18,6 @@ const Product = (props) => {
 
   const addToCart = () => {
     const item = cartItems.find((item) => item.id === props.id);
-    console.log(item);
     if (!item) {
       const itemToAdd = {
         id: props.id,
@@ -26,12 +25,12 @@ const Product = (props) => {
         img: props.img,
         description: props.description,
         price: props.price,
-        amount: amount,
+        amount: parseInt(amount),
       };
       console.log(itemToAdd);
       dispatch(addItem(itemToAdd));
     } else {
-      dispatch(changeAmount(item.id, item.amount + 1));
+      dispatch(changeAmount(item.id, item.amount + parseInt(amount)));
     }
   };
 

@@ -79,11 +79,12 @@ const CartItem = (props) => {
                     <input
                       type="number"
                       className="quantity"
-                      step="1"
+                      step={1}
                       min={1}
                       value={product.amount}
                       onChange={(e) => onChangeProductQuantity(e, product.id)}
                     />
+                    <span className="quantity-kg">KG</span>
                   </div>
 
                   <div className="remove">

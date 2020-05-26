@@ -168,6 +168,12 @@ header .count {
   height: 60px;
 }
 
+.quantity-kg {
+  padding-top: 5px;
+  position: absolute;
+  text-align: center;
+}
+
 .quantity > input {
   display: inline-block;
   width: 40px;
