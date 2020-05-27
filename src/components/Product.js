@@ -38,13 +38,13 @@ const Product = (props) => {
     <div className="Product">
       <h3 className="Product-title">{props.title}</h3>
       <div className="Product-image">
-        <img src={`${props.img}`} alt="" />
+        <img src={props.img} alt="" />
       </div>
       <p className="Product-data">{props.description}</p>
       <p className="Product-data">
         <b>${(props.price * amount).toFixed(2)}/kg</b>
       </p>
-      Amount in kg:
+      <p className="Product-data">Amount in kg:</p>
       <div className="Product-amount">
         <Form.Control
           min={1}

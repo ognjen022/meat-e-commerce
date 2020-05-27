@@ -5,23 +5,24 @@ import Product from './Product';
 import './Dashboard.css';
 
 const Dashboard = (props) => {
+  const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    console.log(loading);
     fetchProducts();
-    setLoading(false);
+    console.log(loading);
   }, []);
 
   const fetchProducts = async () => {
     try {
       const res = await axios.get(`http://kbapi.dvlp.rs/products`);
       setProducts(res.data);
+      setLoading(false);
     } catch (err) {
       console.error(err.message);
     }
   };
-
-  const [products, setProducts] = useState([]);
 
   return (
     <div>

@@ -7,7 +7,7 @@ const Spinner = () => {
         className="text-green-500 opacity-75 top-1/2 my-0 mx-auto block relative w-0 h-0"
         style={{ top: '50%' }}
       >
-        <i className="fas fa-circle-notch fa-spin fa-5x"></i>
+        <i className="fas fa-circle-notch fa-spin fa-4x"></i>
       </span>
     </div>
   );
