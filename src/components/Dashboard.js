@@ -11,13 +11,13 @@ const Dashboard = (props) => {
 
   useEffect(() => {
     fetchProducts();
-    setLoading(false);
   }, []);
 
   const fetchProducts = async () => {
     try {
       const res = await axios.get(`http://kbapi.dvlp.rs/products`);
       setProducts(res.data);
+      setLoading(false);
     } catch (err) {
       console.error(err.message);
     }
@@ -25,11 +25,16 @@ const Dashboard = (props) => {
 
   return (
     <div>
+      <h3 className="Dashboard-title">All Products: </h3>
+
       {loading ? (
-        <Spinner />
+        <div className="Dashboard flex justify-between">
+          <h3 className="loading-title mt-10 text-2xl mx-auto">
+            Loading Products...
+          </h3>
+        </div>
       ) : (
         <div>
-          <h3 className="Dashboard-title">All Products: </h3>
           <br />
           <div className="Dashboard flex justify-between">
             {products.map((product, i) => {
