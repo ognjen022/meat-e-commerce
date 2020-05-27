@@ -31,7 +31,7 @@ const Dashboard = (props) => {
         <div>
           <h3 className="Dashboard-title">All Products: </h3>
           <br />
-          <div className="Dashboard">
+          <div className="Dashboard flex justify-between">
             {products.map((product, i) => {
               return (
                 <div key={i}>

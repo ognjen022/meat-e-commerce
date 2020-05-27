@@ -35,29 +35,64 @@ const Product = (props) => {
   };
 
   return (
-    <div className="Product">
-      <h3 className="Product-title">{props.title}</h3>
-      <div className="Product-image">
-        <img src={props.img} alt="" />
+    // <div className="Product">
+    //   <h3 className="Product-title">{props.title}</h3>
+    //   <div className="Product-image">
+    //     <img src={props.img} alt="" />
+    //   </div>
+    //   <p className="Product-data">{props.description}</p>
+    //   <p className="Product-data">
+    //     <b>${(props.price * amount).toFixed(2)}/kg</b>
+    //   </p>
+    //   <p className="Product-data">Amount in kg:</p>
+    // <div className="Product-amount">
+    //   <Form.Control
+    //     min={1}
+    //     value={amount}
+    //     onChange={(e) => handleChange(e)}
+    //     size="sm"
+    //     type="number"
+    //     placeholder="0"
+    //   />
+    // </div>
+    //   <button onClick={addToCart} className="Product-button">
+    //     <span>Add To Cart</span>
+    //   </button>
+    // </div>
+    <div className="box-wrapper mx-10">
+      <img src={props.img} alt="rhcp" />
+      <div className="box-content">
+        <span className="buy cursor-pointer">
+          <span onClick={addToCart}>
+            <i className="fa fa-cart-plus"></i>
+          </span>
+        </span>
+        <div className="title">{props.title}</div>
+        <div className="desc">{props.description}</div>
+        <div className="price">Amount:</div>
+        <div className="Product-amount">
+          <Form.Control
+            className="Product-amount-input"
+            min={1}
+            value={amount}
+            onChange={(e) => handleChange(e)}
+            size="sm"
+            type="number"
+            placeholder="0"
+          />
+        </div>
+        <span className="price">{props.price}$</span>
+        <div className="footer">
+          <ul>
+            <li className="fa fa-star"></li>
+            <li className="fa fa-star"></li>
+            <li className="fa fa-star"></li>
+            <li className="fa fa-star"></li>
+            <li className="fa fa-star-o"></li>
+          </ul>
+        </div>
       </div>
-      <p className="Product-data">{props.description}</p>
-      <p className="Product-data">
-        <b>${(props.price * amount).toFixed(2)}/kg</b>
-      </p>
-      <p className="Product-data">Amount in kg:</p>
-      <div className="Product-amount">
-        <Form.Control
-          min={1}
-          value={amount}
-          onChange={(e) => handleChange(e)}
-          size="sm"
-          type="number"
-          placeholder="0"
-        />
-      </div>
-      <button onClick={addToCart} className="Product-button">
-        <span>Add To Cart</span>
-      </button>
+      <div className="success"></div>
     </div>
   );
 };

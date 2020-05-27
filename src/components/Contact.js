@@ -8,6 +8,7 @@ const Contact = (props) => {
     name: '',
     lastname: '',
     email: '',
+    adress: '',
     number: '',
     body: '',
     card: '',
@@ -51,7 +52,7 @@ const Contact = (props) => {
             value={formData.name}
             onChange={(e) => handleChange(e)}
             type="text"
-            required=""
+            required="true"
             placeholder="Your Name"
             aria-label="Name"
           />
@@ -66,8 +67,23 @@ const Contact = (props) => {
             value={formData.lastname}
             onChange={(e) => handleChange(e)}
             type="text"
-            required=""
+            required="true"
             placeholder="Your Last Name"
+            aria-label="Name"
+          />
+        </div>
+        <div className="">
+          <label className="block text-sm text-gray-00" htmlFor="cus_name">
+            Adress
+          </label>
+          <input
+            className="w-full px-2 py-1 text-gray-700 bg-gray-200 rounded"
+            name="adress"
+            value={formData.adress}
+            onChange={(e) => handleChange(e)}
+            type="text"
+            required="true"
+            placeholder="Your Adress"
             aria-label="Name"
           />
         </div>
@@ -81,7 +97,7 @@ const Contact = (props) => {
             value={formData.email}
             onChange={(e) => handleChange(e)}
             type="text"
-            required=""
+            required="true"
             placeholder="Your Email"
             aria-label="Email"
           />
@@ -96,7 +112,7 @@ const Contact = (props) => {
             value={formData.number}
             onChange={(e) => handleChange(e)}
             type="text"
-            required=""
+            required="true"
             placeholder="Your phone number"
             aria-label="Email"
           />
@@ -128,7 +144,7 @@ const Contact = (props) => {
             value={formData.card}
             onChange={(e) => handleChange(e)}
             type="text"
-            required=""
+            required="true"
             placeholder="Card Number MM/YY CVC"
             aria-label="Name"
           />
