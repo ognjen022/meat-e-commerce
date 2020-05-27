@@ -15,7 +15,7 @@ const Dashboard = (props) => {
 
   const fetchProducts = async () => {
     try {
-      const res = await axios.get(`http://kbapi.dvlp.rs/products`);
+      const res = await axios.get(`${process.env.STRAPI_URL}/products`);
       setProducts(res.data);
     } catch (err) {
       console.error(err.message);
