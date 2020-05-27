@@ -9,16 +9,14 @@ const Dashboard = (props) => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    console.log(loading);
     fetchProducts();
-    console.log(loading);
+    setLoading(false);
   }, []);
 
   const fetchProducts = async () => {
     try {
       const res = await axios.get(`http://kbapi.dvlp.rs/products`);
       setProducts(res.data);
-      setLoading(false);
     } catch (err) {
       console.error(err.message);
     }
