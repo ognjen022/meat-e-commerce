@@ -3,6 +3,7 @@ import axios from 'axios';
 import Spinner from './Spinner';
 import Product from './Product';
 import './Dashboard.css';
+require('dotenv').config();
 
 const Dashboard = (props) => {
   const [products, setProducts] = useState([]);
@@ -15,7 +16,7 @@ const Dashboard = (props) => {
 
   const fetchProducts = async () => {
     try {
-      const res = await axios.get(`${process.env.STRAPI_URL}/products`);
+      const res = await axios.get(`http://kbapi.dvlp.rs/products`);
       setProducts(res.data);
     } catch (err) {
       console.error(err.message);
