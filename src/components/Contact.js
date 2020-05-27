@@ -11,7 +11,7 @@ const Contact = (props) => {
     adress: '',
     number: '',
     body: '',
-    card: '',
+    zip: '',
   });
 
   const handleChange = (e) => {
@@ -36,129 +36,114 @@ const Contact = (props) => {
   };
 
   return (
-    <div className="leading-loose mx-auto">
-      <form
-        onSubmit={onFormSubmit}
-        className="max-w-xl mx-auto m-4 p-10 bg-white rounded shadow-xl"
-      >
-        <p className="text-gray-800 font-medium">Customer information</p>
-        <div className="">
-          <label className="block text-sm text-gray-00" htmlFor="cus_name">
-            Name
-          </label>
+    <form onSubmit={onFormSubmit} id="contact-form" className="form cf">
+      <h3 className="col-100">Customer Information</h3>
+
+      <div className="col cf">
+        <div className="form-row cf">
+          <i className="fas fa-user form-icon"></i>
+          <label htmlFor="input-name">Name: *</label>
           <input
-            className="w-full px-2 py-1 text-gray-700 bg-gray-200 rounded"
-            name="name"
+            type="text"
+            required={true}
             value={formData.name}
             onChange={(e) => handleChange(e)}
-            type="text"
-            required="true"
-            placeholder="Your Name"
-            aria-label="Name"
+            name="name"
+            id="input-name"
           />
         </div>
-        <div className="">
-          <label className="block text-sm text-gray-00" htmlFor="cus_name">
-            Last Name
-          </label>
+
+        <div className="form-row cf">
+          <i className="far fa-user form-icon"></i>
+          <label htmlFor="input-lastname">Last Name: *</label>
           <input
-            className="w-full px-2 py-1 text-gray-700 bg-gray-200 rounded"
-            name="lastname"
+            type="text"
+            required={true}
             value={formData.lastname}
             onChange={(e) => handleChange(e)}
-            type="text"
-            required="true"
-            placeholder="Your Last Name"
-            aria-label="Name"
+            name="lastname"
+            id="input-lastname"
           />
         </div>
-        <div className="">
-          <label className="block text-sm text-gray-00" htmlFor="cus_name">
-            Adress
-          </label>
+
+        <div className="form-row cf">
+          <i className="fas fa-envelope form-icon"></i>
+          <label htmlFor="input-email">Email: *</label>
           <input
-            className="w-full px-2 py-1 text-gray-700 bg-gray-200 rounded"
-            name="adress"
-            value={formData.adress}
-            onChange={(e) => handleChange(e)}
             type="text"
-            required="true"
-            placeholder="Your Adress"
-            aria-label="Name"
-          />
-        </div>
-        <div className="mt-2">
-          <label className="block text-sm text-gray-600" htmlFor="cus_email">
-            Email
-          </label>
-          <input
-            className="w-full px-2 py-1 text-gray-700 bg-gray-200 rounded"
             name="email"
+            required={true}
             value={formData.email}
             onChange={(e) => handleChange(e)}
-            type="text"
-            required="true"
-            placeholder="Your Email"
-            aria-label="Email"
+            id="input-email"
           />
         </div>
-        <div className="mt-2">
-          <label className=" block text-sm text-gray-600" htmlFor="cus_email">
-            Phone
-          </label>
+      </div>
+
+      <div className="col cf">
+        <div className="form-row cf">
+          <i className="fas fa-phone form-icon"></i>
+          <label htmlFor="input-phone">Phone: *</label>
           <input
-            className="w-full px-2 py-1 text-gray-700 bg-gray-200 rounded"
-            name="number"
+            type="text"
+            required={true}
             value={formData.number}
             onChange={(e) => handleChange(e)}
-            type="text"
-            required="true"
-            placeholder="Your phone number"
-            aria-label="Email"
+            name="number"
+            id="input-phone"
           />
         </div>
-        <div className="mt-2">
-          <label className=" block text-sm text-gray-600" htmlFor="cus_email">
-            Additional Info
-          </label>
-          <textarea
-            className="w-full px-2 text-gray-700 bg-gray-200 rounded"
-            name="body"
-            value={formData.body}
-            onChange={(e) => handleChange(e)}
-            type="textarea"
-            rows="4"
-            cols="50"
-            placeholder="If you have any additional info for us, let us know here"
-            aria-label="Email"
-          />
-        </div>
-        <p className="mt-4 text-gray-800 font-medium">Payment information</p>
-        <div className="">
-          <label className="block text-sm text-gray-600" htmlFor="cus_name">
-            Card
-          </label>
+
+        <div className="form-row cf">
+          <i className="fas fa-map-marker-alt form-icon"></i>
+          <label htmlFor="input-adress">Adress: *</label>
           <input
-            className="w-full px-2 py-1 text-gray-700 bg-gray-200 rounded"
-            name="card"
-            value={formData.card}
-            onChange={(e) => handleChange(e)}
             type="text"
-            required="true"
-            placeholder="Card Number MM/YY CVC"
-            aria-label="Name"
+            required={true}
+            value={formData.address}
+            onChange={(e) => handleChange(e)}
+            name="adress"
+            id="input-adress"
           />
         </div>
-        <div className="mt-4">
-          <button
-            className="px-4 py-1 text-white bg-gray-800 transition duration-500 ease-in-out block mx-auto font-light tracking-wider hover:bg-gray-900 rounded"
-            type="submit"
-          >
-            Submit Order
-          </button>
+
+        <div className="form-row cf">
+          <i className="fas fa-address-card form-icon"></i>
+          <label htmlFor="input-zip">Zip: *</label>
+          <input
+            type="text"
+            required={true}
+            value={formData.zip}
+            onChange={(e) => handleChange(e)}
+            name="zip"
+            id="input-zip"
+          />
         </div>
-      </form>
-    </div>
+      </div>
+
+      <div className="form-row col-100 cf">
+        <i className="fas fa-info-circle form-icon"></i>
+        <label htmlFor="textarea-message">Additional Information: </label>
+        <textarea
+          id="textarea-message"
+          rows="4"
+          value={formData.body}
+          onChange={(e) => handleChange(e)}
+          cols="50"
+          name="body"
+        ></textarea>
+      </div>
+
+      <div className="form-row col-100 cf">
+        <button
+          type="submit"
+          value="Submit Order"
+          className="contact-form-button"
+        >
+          Submit Order
+        </button>
+      </div>
+    </form>
   );
 };
 

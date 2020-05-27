@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import Spinner from './Spinner';
 import Product from './Product';
 import './Dashboard.css';
 require('dotenv').config();
@@ -26,7 +25,6 @@ const Dashboard = (props) => {
   return (
     <div>
       <h3 className="Dashboard-title">All Products: </h3>
-
       {loading ? (
         <div className="Dashboard flex justify-between">
           <h3 className="loading-title mt-10 text-2xl mx-auto">

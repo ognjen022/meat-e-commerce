@@ -1,7 +1,8 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
+import { Router } from 'react-router';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
-// import createHistory from "history/createBrowserHistory";
+import { createBrowserHistory } from 'history';
 
 // My components
 import Dashboard from './Dashboard';
@@ -14,15 +15,25 @@ import Cart from './Cart';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './AppRouter.css';
 
+const history = createBrowserHistory();
+
 const AppRouter = () => (
-  <Router>
+  <Router history={history}>
     <Header />
     <Route
       render={({ location }) => (
         <TransitionGroup>
           <CSSTransition key={location.key} classNames="fade" timeout={500}>
             <Switch location={location}>
-              <Route exact path="/" component={Landing} />
+              <Route
+                exact
+                path="/"
+                render={() => (
+                  <div className="page">
+                    <Landing />
+                  </div>
+                )}
+              />
               <Route
                 exact
                 path="/products"

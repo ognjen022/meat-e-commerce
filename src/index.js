@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import AppRouter from './components/AppRouter';
 import store from './store/store';
 import { Provider } from 'react-redux';
-import './tailwind.generated.css';
+import './index.css';
 
 const App = () => {
   return <AppRouter />;
