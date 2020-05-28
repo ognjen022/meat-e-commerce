@@ -1,6 +1,7 @@
 .Landing-button {
+  margin-right: 10px;
   text-align: center;
-  background-color: black;
+  background-color: rgb(184, 22, 22);
   border: none;
   border-radius: 10px;
   color: white;
@@ -11,6 +12,17 @@
   padding: 10px 20px;
   text-decoration: none;
   transition: all 0.5s;
+}
+
+.hero-cards-content {
+  display: flex;
+}
+
+.hero-cards-title {
+  width: 50%;
+  margin: 20px auto;
+  text-align: center;
+  border-bottom: 2px solid white;
 }
 
 .Landing-button span {
@@ -41,9 +53,19 @@
 }
 
 .Landing-title {
-  color: white;
+  text-shadow: 2px 2px #000000;
+  color: rgb(255, 255, 255);
   position: center;
-  font-size: 2rem;
+  font-size: 3rem;
+  margin: 20px 0 1.6rem 0;
+  line-height: 1;
+}
+
+.Landing-subtitle {
+  text-shadow: 1px 1px #000000;
+  color: rgb(255, 255, 255);
+  position: center;
+  font-size: 1.2rem;
   margin: 20px 0 1.6rem 0;
   line-height: 1;
 }
@@ -53,12 +75,12 @@
   border-radius: 3px;
   padding: 3.2rem 1.6rem;
   text-align: center;
-  width: 25rem;
+  width: 35rem;
 }
 
 .Landing-box {
   align-items: center;
-  background: url('https://cmkt-image-prd.freetls.fastly.net/0.1.0/ps/949193/910/590/m2/fpnw/wm1/u1mgld89kri3ytgjbz2gejn81lady8ci0vooy2ek37jxksslr3sn1zyn9puwv4uj-.jpg?1454262377&s=9847bf09fd4af9d87bb56c7d235a24a4');
+  background: url('https://article.images.consumerreports.org/f_auto/prod/content/dam/CRO%20Images%202018/Health/May/CR-Health-InlineHero-Chicken-Antibiotics-0417');
   background-size: cover;
   display: flex;
   height: 100vh;

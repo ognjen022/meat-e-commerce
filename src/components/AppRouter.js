@@ -11,6 +11,8 @@ import About from './About';
 import Contact from './Contact';
 import Landing from './Landing';
 import Cart from './Cart';
+import Footer from './Footer';
+
 // Bootstrap
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './AppRouter.css';
@@ -31,6 +33,7 @@ const AppRouter = () => (
                 render={() => (
                   <div className="page">
                     <Landing />
+                    <Footer />
                   </div>
                 )}
               />
