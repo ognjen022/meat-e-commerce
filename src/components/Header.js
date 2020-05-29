@@ -7,7 +7,7 @@ import { useSelector } from 'react-redux';
 const Header = (props) => {
   const cartItems = useSelector((state) => state.cart);
   return (
-    <Navbar bg="dark" variant="dark" expand="lg">
+    <Navbar bg="light" variant="light" expand="lg">
       <Nav.Link as={Link} to="/">
         <Navbar.Brand className="Header-logo-container">
           <img alt="logo" className="Header-logo" src="./chickenfavicon.png" />
