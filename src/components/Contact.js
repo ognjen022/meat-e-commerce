@@ -45,6 +45,7 @@ const Contact = (props) => {
           <label htmlFor="input-name">Name: *</label>
           <input
             type="text"
+            placeholder="John"
             required={true}
             value={formData.name}
             onChange={(e) => handleChange(e)}
@@ -58,6 +59,7 @@ const Contact = (props) => {
           <label htmlFor="input-lastname">Last Name: *</label>
           <input
             type="text"
+            placeholder="Doe"
             required={true}
             value={formData.lastname}
             onChange={(e) => handleChange(e)}
@@ -71,6 +73,7 @@ const Contact = (props) => {
           <label htmlFor="input-email">Email: *</label>
           <input
             type="text"
+            placeholder="john@domain.com"
             name="email"
             required={true}
             value={formData.email}
@@ -86,6 +89,7 @@ const Contact = (props) => {
           <label htmlFor="input-phone">Phone: *</label>
           <input
             type="text"
+            placeholder="+3630 xxx xxxx"
             required={true}
             value={formData.number}
             onChange={(e) => handleChange(e)}
@@ -99,6 +103,7 @@ const Contact = (props) => {
           <label htmlFor="input-adress">Adress: *</label>
           <input
             type="text"
+            placeholder="21st Baker Street"
             required={true}
             value={formData.address}
             onChange={(e) => handleChange(e)}
@@ -112,6 +117,7 @@ const Contact = (props) => {
           <label htmlFor="input-zip">Zip: *</label>
           <input
             type="text"
+            placeholder="1114"
             required={true}
             value={formData.zip}
             onChange={(e) => handleChange(e)}
@@ -126,6 +132,7 @@ const Contact = (props) => {
         <label htmlFor="textarea-message">Additional Information: </label>
         <textarea
           id="textarea-message"
+          placeholder="Any other information you have for us goes here..."
           rows="4"
           value={formData.body}
           onChange={(e) => handleChange(e)}
