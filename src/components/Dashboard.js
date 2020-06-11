@@ -13,7 +13,7 @@ const Dashboard = (props) => {
     // fetchProducts();
     setProducts([
       {
-        id: uuidv4(),
+        id: 0,
         title: 'Beef Fillet',
         img:
           'https://justmeat.ltd/image/cache/catalog/MI%C4%98SO/7836310_1-228x228.jpg',
@@ -21,7 +21,7 @@ const Dashboard = (props) => {
         description: 'This is a beef fillet.',
       },
       {
-        id: uuidv4(),
+        id: 1,
         title: 'Beef Flank',
         img:
           'https://justmeat.ltd/image/cache/catalog/MI%C4%98SO/Depositphotos_111084932_original-228x228.jpg',
@@ -29,7 +29,7 @@ const Dashboard = (props) => {
         description: 'This is a beef flank.',
       },
       {
-        id: uuidv4(),
+        id: 2,
         title: 'Beef Liver',
         img:
           'https://justmeat.ltd/image/cache/catalog/MI%C4%98SO/7836333_1-228x228.jpg',
@@ -37,7 +37,7 @@ const Dashboard = (props) => {
         description: 'This is a beef liver.',
       },
       {
-        id: uuidv4(),
+        id: 3,
         title: 'Beef Trimming',
         img:
           'https://justmeat.ltd/image/cache/catalog/MI%C4%98SO/8108043_1-228x228.jpg',
@@ -45,7 +45,7 @@ const Dashboard = (props) => {
         description: 'This is beef trimming.',
       },
       {
-        id: uuidv4(),
+        id: 4,
         title: 'Chicken Breast',
         img:
           'https://justmeat.ltd/image/cache/catalog/MI%C4%98SO/7836277_1-228x228.jpg',
@@ -53,7 +53,7 @@ const Dashboard = (props) => {
         description: 'This is chicken breast.',
       },
       {
-        id: uuidv4(),
+        id: 5,
         title: 'Chicken Liver',
         img:
           'https://justmeat.ltd/image/cache/catalog/MI%C4%98SO/7836336_1-228x228.jpg',
@@ -61,7 +61,7 @@ const Dashboard = (props) => {
         description: 'This is chicken liver.',
       },
       {
-        id: uuidv4(),
+        id: 6,
         title: 'Pork Loins',
         img:
           'https://image.shutterstock.com/image-photo/meat-pork-slices-loin-on-260nw-561686899.jpg',
@@ -69,7 +69,7 @@ const Dashboard = (props) => {
         description: 'These are pork loins.',
       },
       {
-        id: uuidv4(),
+        id: 7,
         title: 'Whole Chicken',
         img:
           'https://previews.123rf.com/images/milkos/milkos1808/milkos180800676/106383302-top-view-of-fresh-raw-chicken-isolated-on-white-background.jpg',
