@@ -77,6 +77,7 @@ const Dashboard = (props) => {
         description: 'This is a whole chicken.',
       },
     ]);
+    setLoading(false);
   }, []);
 
   const fetchProducts = async () => {
