@@ -26,6 +26,7 @@ const MapsContact = () => {
           <section className="section2 clearfix">
             <div className="coll2 column1 first">
               <iframe
+                className="maps-iframe"
                 title="store-location"
                 src="https://www.google.com/maps/embed?pb=!1m21!1m12!1m3!1d1415.3678200061574!2d20.469267913033313!3d44.80657594836174!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m6!3e2!4m0!4m3!3m2!1d44.806817699999996!2d20.4695254!5e0!3m2!1sen!2shu!4v1590670439874!5m2!1sen!2shu"
                 width="500"

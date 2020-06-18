@@ -18,6 +18,12 @@
   display: flex;
 }
 
+@media (max-width: 600px) {
+  .hero-cards-content {
+    display: block;
+  }
+}
+
 .hero-cards-title {
   width: 50%;
   margin: 20px auto;

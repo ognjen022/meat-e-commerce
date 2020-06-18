@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { v4 as uuidv4 } from 'uuid';
+import { useSelector } from 'react-redux';
 import Product from './Product';
 import './Dashboard.css';
 require('dotenv').config();
@@ -8,6 +8,17 @@ require('dotenv').config();
 const Dashboard = (props) => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
+
+  const cartItems = useSelector((state) => state.cart);
+
+  const syncLocalStorage = () => {
+    window.localStorage.setItem('cart', JSON.stringify(cartItems));
+  };
+
+  useEffect(() => {
+    console.log('called');
+    syncLocalStorage();
+  }, [cartItems]);
 
   useEffect(() => {
     // fetchProducts();
