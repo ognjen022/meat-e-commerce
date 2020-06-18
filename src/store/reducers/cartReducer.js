@@ -1,6 +1,6 @@
 import { ADD_ITEM, REMOVE_ITEM, CHANGE_AMOUNT } from '../../consts/cartConsts';
 
-const initialState = JSON.parse(localStorage.getItem('cart'));
+const initialState = JSON.parse(localStorage.getItem('cart')) || [];
 
 export default function (state = initialState, action) {
   switch (action.type) {
