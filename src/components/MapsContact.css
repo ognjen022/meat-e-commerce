@@ -13,7 +13,9 @@
 }
 @media (max-width: 500px) {
   .maps-iframe {
-    width: 350px;
+    margin: auto;
+    width: 250px;
+    height: 300px;
   }
 }
 
@@ -147,8 +149,15 @@ select:focus {
     padding: 0 30px 70px;
   }
   .section2 .coll2 {
-    width: 100%;
+    /* width: 100%; */
     display: block;
+    width: 250px;
+  }
+  .section2 .sec2contactform input[type='submit'] {
+    width: 100%;
+  }
+  .section2 .coll2.last {
+    float: none;
   }
   .section2 .coll2.first {
     margin-bottom: 10px;

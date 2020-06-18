@@ -109,9 +109,9 @@ body * {
   border: none;
   display: inline-block;
 }
-[class*='col'] {
+/* [class*='col'] {
   padding: 0 1rem;
-}
+} */
 .col {
   flex-grow: 1;
 }
