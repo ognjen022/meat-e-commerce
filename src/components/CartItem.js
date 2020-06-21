@@ -32,7 +32,7 @@ const CartItem = (props) => {
   };
 
   const onChangeProductQuantity = (e, itemid) => {
-    dispatch(changeAmount(itemid, e.target.value));
+    dispatch(changeAmount(itemid, parseInt(e.target.value)));
   };
 
   const onRemoveProduct = (itemid) => {
