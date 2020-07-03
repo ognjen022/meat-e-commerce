@@ -25,10 +25,9 @@ const Login = () => {
     e.preventDefault();
     try {
       const res = await axios.post(
-        'http://meat-store-api.herokuapp.com/users/login',
+        'https://meat-store-api.herokuapp.com/users/login',
         formData
       );
-      console.log(res.data);
       dispatch(login(res.data));
       setError(null);
       history.push('/orders');
