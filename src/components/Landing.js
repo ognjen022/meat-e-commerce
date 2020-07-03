@@ -9,7 +9,7 @@ const Landing = () => {
     <div>
       <div className="Landing-box">
         <div className="Landing-box-layout">
-          <h1 className="Landing-title">KBINVEST</h1>
+          <h1 className="Landing-title">MEAT STORE</h1>
           <h5 className="Landing-subtitle">
             Chicken export shop located in Lorem Ipsum. We provide high-quality
             chicken meat, and class A UK poultry. We ship chicken meat all

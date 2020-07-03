@@ -1,0 +1,10 @@
+.Order-card {
+  width: 50%;
+  margin: 25px auto;
+}
+
+.Order-info {
+  text-align: center;
+  border-top: 1px solid lightgray;
+  padding-top: 13px;
+}

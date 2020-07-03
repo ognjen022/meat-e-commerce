@@ -12,6 +12,9 @@ import Contact from './Contact';
 import Landing from './Landing';
 import Cart from './Cart';
 import Footer from './Footer';
+import PrivateRoute from './PrivateRoute';
+import Login from './Login';
+import Orders from './Orders';
 
 // Bootstrap
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -73,6 +76,16 @@ const AppRouter = () => (
                   </div>
                 )}
               />
+              <Route
+                exact
+                path="/login"
+                render={() => (
+                  <div className="page">
+                    <Login />
+                  </div>
+                )}
+              />
+              <PrivateRoute exact path="/orders" component={Orders} />
             </Switch>
           </CSSTransition>
         </TransitionGroup>

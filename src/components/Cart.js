@@ -11,7 +11,6 @@ const Cart = (props) => {
   };
 
   useEffect(() => {
-    console.log('called');
     syncLocalStorage();
   }, [cartItems]);
 

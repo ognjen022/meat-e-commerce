@@ -15,7 +15,7 @@ const Footer = () => {
                 <span>Address: Isabellalei 7, 2018 Antwerpen, Belgium</span>
                 <br />
                 <br />
-                <span>Email: info@kbinvest.com</span>
+                <span>Email: info@company.com</span>
                 <br />
                 <br />
                 <span>Phone Number: +3232394189</span>

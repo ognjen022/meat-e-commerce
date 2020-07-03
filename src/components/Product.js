@@ -27,7 +27,6 @@ const Product = (props) => {
         price: props.price,
         amount: parseInt(amount),
       };
-      console.log(itemToAdd);
       dispatch(addItem(itemToAdd));
     } else {
       dispatch(changeAmount(item.id, item.amount + parseInt(amount)));
