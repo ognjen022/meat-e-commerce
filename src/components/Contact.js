@@ -61,7 +61,7 @@ const Contact = (props) => {
         orderDate: moment(moment.now()).format('MMMM Do YYYY, h:mm:ss a'),
         productsOrdered: [...cartItems],
       };
-      await axios.post('http://meat-store-api.herokuapp.com/orders', order);
+      await axios.post('https://meat-store-api.herokuapp.com/orders', order);
     } catch (err) {
       console.log(err);
       setError(err.response.data.message);

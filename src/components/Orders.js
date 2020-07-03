@@ -19,7 +19,7 @@ const Orders = () => {
     };
     try {
       await axios.put(
-        `http://meat-store-api.herokuapp.com/orders/${id}`,
+        `https://meat-store-api.herokuapp.com/orders/${id}`,
         {
           completed: true,
         },
@@ -40,7 +40,7 @@ const Orders = () => {
       };
 
       const { data } = await axios.get(
-        'http://meat-store-api.herokuapp.com/orders',
+        'https://meat-store-api.herokuapp.com/orders',
         config
       );
 

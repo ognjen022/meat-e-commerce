@@ -26,7 +26,7 @@ const Dashboard = (props) => {
   const fetchProducts = async () => {
     try {
       const res = await axios.get(
-        `http://meat-store-api.herokuapp.com/products`
+        `https://meat-store-api.herokuapp.com/products`
       );
       setProducts(res.data);
       setLoading(false);
