@@ -37,11 +37,13 @@ const Contact = (props) => {
       !formData.lastname ||
       !formData.address ||
       !formData.number ||
-      !formData.body ||
       !formData.zip ||
       !formData.email
     ) {
-      setError();
+      setError('Please fill in all the fields');
+      return false;
+    } else if (cartItems.length === 0) {
+      setError('Your cart is empty');
       return false;
     } else {
       return true;
@@ -76,7 +78,7 @@ const Contact = (props) => {
   };
 
   const handleShow = () => {
-    const res = handleCartItemsInfo();
+    handleCartItemsInfo();
     setShow(true);
   };
 
@@ -91,7 +93,7 @@ const Contact = (props) => {
     setTimeout(() => {
       history.push('/products');
       setShow(false);
-    }, 3000);
+    }, 1200);
   };
 
   const handleCartItemsInfo = () => {
@@ -222,9 +224,9 @@ const Contact = (props) => {
             </Modal.Header>
             <Modal.Body>Thank you for your order!</Modal.Body>
             <Modal.Footer>
-              <Button variant="secondary" onClick={handleModalCartRedirect}>
+              {/* <Button variant="secondary" onClick={handleModalCartRedirect}>
                 Back To Cart
-              </Button>
+              </Button> */}
             </Modal.Footer>
           </Modal>
         ) : (
@@ -270,11 +272,7 @@ const Contact = (props) => {
       </form>
       <div className="form-row col-100 cf">
         <button
-          onClick={() =>
-            checkFormValidity()
-              ? handleShow()
-              : setError('Please fill in all the fields.')
-          }
+          onClick={() => (checkFormValidity() ? handleShow() : '')}
           value="Submit Order"
           className="contact-form-button"
         >
